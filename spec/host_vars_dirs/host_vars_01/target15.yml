@@ -1,9 +1,5 @@
 ---
 kubernetes_common:
-  master: 
-    hostname: k8s-master
-    api_port: 8080
   hosts:
     - name: k8s-master
       ip: 192.168.1.115
-  allow_privileged: true

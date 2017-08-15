@@ -14,7 +14,6 @@ This role executes the following settings.
   * put yum repository of kubernetes
 * Kubernetes setting
   * install necessary packages
-  * put kubernetes common config
 
 ## Caution!!
 * This role assumpts a part of network settings (nics, default gateway and dns server) is completed.
@@ -29,15 +28,11 @@ This role executes the following settings.
 ## Role variables
 ```
 kubernetes_common:
-  master:
-    hostname: k8s-master  # hostname of master node
-    api_port: 8080        # listen port of api server
   hosts:
     - name: k8s-master    # name of this hosts entry
       ip: 192.168.1.115   # ip of this hosts entry
     - name: k8s-minion    # name of this hosts entry
       ip: 192.168.1.116   # ip of this hosts entry
-  allow_privileged: true  # flag of allow to create priveleged container
 ```
 
 ## Dependencies
