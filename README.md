@@ -28,7 +28,7 @@ This role executes the following settings.
 
 ## Role variables
 ```
-kubernetes_master:
+kubernetes_common:
   hostname: k8s-master    # hostname of target
   hosts:
     - name: k8s-master    # name of this hosts entry

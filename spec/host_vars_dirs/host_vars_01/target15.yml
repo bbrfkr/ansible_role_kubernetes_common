@@ -1,5 +1,5 @@
 ---
-kubernetes_master:
+kubernetes_common:
   hostname: k8s-master
   hosts:
     - name: k8s-master
