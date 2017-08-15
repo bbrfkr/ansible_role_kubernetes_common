@@ -46,7 +46,7 @@ None
 |branch|status|
 |------|------|
 |master|[![Build Status](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_master/badge/icon)](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_master/)|
-|v.0.1 |[![Build Status](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_ocata/badge/icon)](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_ocata/)|
+|v.0.1 |[![Build Status](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_v.0.1/badge/icon)](http://jenkins.bbrfkr.mydns.jp:8088/job/ansible_role_kubernetes_common_v.0.1/)|
 
 ## Retest
 This role is tested by serverspec, then its test codes are included in repository. Users can retest this role by using the test codes. To retest this role, follow the steps described below.
