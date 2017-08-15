@@ -19,5 +19,5 @@ KUBE_LOG_LEVEL="--v=0"
 KUBE_ALLOW_PRIV="--allow-privileged={{ kubernetes_common.allow_privileged | ternary("true", "false") }}"
 
 # How the controller-manager, scheduler, and proxy find the apiserver
-KUBE_MASTER="--master=http://{{ kubernetes_common.api_server.hostname }}:{{ kubernetes_common.api_server.port }}"
+KUBE_MASTER="--master=http://{{ kubernetes_common.master.hostname }}:{{ kubernetes_common.master.api_port }}"
 

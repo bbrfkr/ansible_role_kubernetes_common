@@ -29,9 +29,9 @@ This role executes the following settings.
 ## Role variables
 ```
 kubernetes_common:
-  api_server:
-    hostname: k8s-master    # hostname of api server
-    port: 8080              # listen port of api server
+  master:
+    hostname: k8s-master  # hostname of master node
+    api_port: 8080        # listen port of api server
   hosts:
     - name: k8s-master    # name of this hosts entry
       ip: 192.168.1.115   # ip of this hosts entry

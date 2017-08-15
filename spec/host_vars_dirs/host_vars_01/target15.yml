@@ -1,8 +1,8 @@
 ---
 kubernetes_common:
-  api_server: 
+  master: 
     hostname: k8s-master
-    port: 8080
+    api_port: 8080
   hosts:
     - name: k8s-master
       ip: 192.168.1.115
