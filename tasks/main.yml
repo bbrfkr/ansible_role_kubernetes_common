@@ -1,0 +1,45 @@
+---
+- name: change selinux state
+  selinux:
+    policy: targeted
+    state: permissive
+  become: yes
+
+- name: stop and disable firewalld
+  service:
+    name: firewalld
+    state: stopped
+    enabled: no
+  become: yes
+
+- name: put yum repo of kubernetes
+  copy:
+    src: virt7-docker-common-release.repo 
+    dest: /etc/yum.repos.d/virt7-docker-common-release.repo
+  become: yes
+
+- name: install packages
+  yum:
+    name: "{{ item }}"
+    state: installed
+  become: yes
+  with_items:
+    - kubernetes
+    - etcd
+    - flannel
+
+- name: put hosts
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+  become: yes
+
+- name: put kubernetes common config
+  template:
+    src: config.j2
+    dest: /etc/kubernetes/config
+  become: yes
+  notify:
+    - restart kube-apiserver
+    - restart kube-controller-manager
+    - restart kube-scheduler
