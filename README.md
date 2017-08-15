@@ -29,14 +29,15 @@ This role executes the following settings.
 ## Role variables
 ```
 kubernetes_common:
-  hostname: k8s-master    # hostname of target
+  api_server:
+    hostname: k8s-master    # hostname of api server
+    port: 8080              # listen port of api server
   hosts:
     - name: k8s-master    # name of this hosts entry
       ip: 192.168.1.115   # ip of this hosts entry
     - name: k8s-minion    # name of this hosts entry
       ip: 192.168.1.116   # ip of this hosts entry
   allow_privileged: true  # flag of allow to create priveleged container
-  api_port: 8080          # listen port of api server
 ```
 
 ## Dependencies
