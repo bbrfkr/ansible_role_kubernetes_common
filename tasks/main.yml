@@ -27,6 +27,7 @@
     - kubernetes
     - etcd
     - flannel
+    - python-rhsm
 
 - name: put hosts
   template:

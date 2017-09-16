@@ -5,7 +5,7 @@ describe ("check yum repo of kubernetes") do
 end
 
 describe ("check packages are installed") do
-  packages = ["kubernetes", "etcd", "flannel"]
+  packages = ["kubernetes", "etcd", "flannel", "python-rhsm"]
   packages.each do |pkg|
     describe package(pkg) do
       it { should be_installed }
